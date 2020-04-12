@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css")
+    link(rel="stylesheet", href="assets/css/index.css")
+    title Landing Page with GSAP Animations | PUG ans SCSS
+  body
+    
+    //header
+    header.header
+      .container
+        nav.nav
+          a.nav-logo(href="") Codwerk
+          ul.nav-list
+            each val in ['home', 'gallery', 'features', 'reviews', 'shop']
+              li.nav-item
+                a.nav-link(href="#")= val
+          .shopping-bag
+            i.icon.ion-md-cart
+              span.bag-item-count 0
+    //hero
+    section.hero
+      .circle.circle-small
+
+      .container
+        .content
+          .text
+            h1 Codwerk 
+              br
+              |Dev 
+              span Front
+            h5 Je suis un designer front
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem hic quibusdam, tempore molestias doloribus facilis tempora culpa repellat asperiores quia excepturi deleniti distinctio suscipit quos veniam fugiat tenetur odit ipsum?
+            a.cta(href="#") 
+          .logo-wrapper 
+            img(src="assets/img/logo.png", alt="")
+      .overlay
+        .layer.layer1
+        .layer.layer2
+        .layer.layer3
