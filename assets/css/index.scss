@@ -15,6 +15,18 @@ a{text-decoration: none;}
   src: url("../fonts/Poppins-Bold.ttf");
 }
 
+
+$color_0: #FFF;
+$color_1: #293546;
+$color_2: #021226;
+$color_3: #07172B;
+$color_4: #5D6774;
+$color_5: #8B929B;
+$color_6: #402725;
+$color_7: #85524D;
+
+
+
 @mixin containerStyle($mx, $margin, $padding) {
   max-width: $mx;
   margin: $margin;
@@ -29,14 +41,14 @@ a{text-decoration: none;}
   flex: $flex;
 }
 
-$color_0: #FFF;
-$color_1: #293546;
-$color_2: #021226;
-$color_3: #07172B;
-$color_4: #5D6774;
-$color_5: #8B929B;
-$color_6: #402725;
-$color_7: #85524D;
+@mixin circleStyle($w, $h, $b, $r, $l, $bc) {
+  width:$w;
+  height: $h;
+  bottom: $b;
+  right: $r;
+  left: $l;
+  background-color: $bc;
+}
 
 html {
   font-family: "PR";
@@ -63,10 +75,11 @@ html {
           
           .nav__burger {
             display: none;
+            cursor: pointer;
             transition: all 480ms;
             .icon {
               font-size: 3rem;
-              color: $color_4;
+              color: $color_0;
               cursor: pointer;
             }
           }
@@ -75,6 +88,7 @@ html {
             font-weight: 800;
             color: $color_0;
             flex: 1;
+            transition: all 480ms;
           }
 
           .wrapper{
@@ -128,6 +142,158 @@ html {
           }
         }
       }
+
+          /* Laptop */
+        @media (max-width: 1480px) and (min-width: 1025px) {
+          .container {
+            .nav {
+                .nav__burger {
+                  color: $color_0;
+                }
+
+                .wrapper {
+
+                  .nav-list {
+
+                    .nav-item {
+
+                      .nav-link {
+                        color: $color_2;
+                      }
+                    }
+                  }
+                }
+              }
+          }
+        }
+            /* Tablet */
+            @media (max-width: 1024px) and (min-width: 768px) {
+              padding: 3rem 0;
+              .container {
+                .nav {
+
+                  align-items: unset;
+    
+                  .nav__burger{
+                    display: block;
+                    .icon {
+                      font-size: 4.5rem;
+                    }
+                  }
+      
+                  .nav-logo {
+                    flex: 0;
+                    color: $color_0;
+                    font-size: 4rem;
+                  }
+      
+                  .wrapper {
+      
+                    position: fixed;
+                    background-color: $color_2;
+                    width: 100%;
+                    top: -20em;
+                    left: 0em;
+                    height: 60px;
+
+                    &.is-active {
+                      top: 10em;
+                    }
+      
+                    .nav-list {
+      
+                      .nav-item {
+      
+                        .nav-link {
+
+                          color: $color_0;
+                          
+                          &:hover {
+                            color: $color_4;
+                          }
+                        }
+                      }
+                    }
+      
+                    .shopping-bag {
+                      .icon {
+                        color: $color_0;
+                        transform: translateX(-3rem);
+
+                        .bag-item-count{
+                          color: $color_2;
+                        background-color: $color_0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            /* Mobile */
+            @media screen and (max-width: 767px) {
+              padding: 2rem 0;
+              position: relative;
+              .container {
+                .nav {
+    
+                  .nav__burger{
+                    display: block;
+                    .icon {
+                      color: $color_2;
+                    }
+                  }
+      
+                  .nav-logo {
+                    flex: 0;
+                    color: $color_2;
+                  }
+      
+                  .wrapper {
+      
+                    position: fixed;
+                    background-color: $color_2;
+                    width: 50%;
+                    padding-top: 2em;
+                    height: 50vh;
+                    top: 7.52em;
+                    left: -100em;
+                    flex-direction: column;
+
+                    &.is-active {
+                      left: 0em;
+                    }
+      
+                    .nav-list {
+                      flex-direction: column;
+                      width: 100%;
+      
+                      .nav-item {
+
+                        margin: 5.75px 15px;
+                        padding-bottom: .578em;
+                        width: 80%;
+                        border-bottom: 1px solid $color_1;
+      
+                        .nav-link {
+                          
+                          &:hover {
+                            color: $color_4;
+                          }
+                        }
+                      }
+                    }
+      
+                    .shopping-bag {
+                      .icon {
+                        color: $color_0;
+                        transform: translateX(0rem);
+                      }
+                    }
+                  }
+                }
+              }
+            }
     }
 
     .hero {
@@ -150,6 +316,7 @@ html {
           top: -7rem;
           left: -5rem;
           background-color: $color_2;
+          transition: all 480ms;
 
           &::before {
             content: '';
@@ -161,6 +328,7 @@ html {
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: $color_1;
+            transition: all 480ms;
           }
         }
 
@@ -171,6 +339,7 @@ html {
           bottom: -40rem;
           right: -50rem;
           background-color: $color_0;
+          transition: all 480ms;
 
           &::before {
             content: '';
@@ -182,6 +351,7 @@ html {
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: $color_1;
+            transition: all 480ms;
           }
         }
 
@@ -214,6 +384,7 @@ html {
                 font-size: 1.9rem;
                 font-weight: lighter;
                 margin: 8rem 0 4rem 0;
+                text-transform: uppercase;
               }
 
               p {
@@ -273,6 +444,179 @@ html {
             }
           }
         }
+
+       /* Laptop */
+       @media (max-width: 1280px) and (min-width: 1025px) {
+
+
+        .container {
+
+          .content {
+
+            .text {
+
+              h1 {
+
+              }
+              h5 {
+
+              }
+              p{
+                color: $color_2;
+              }
+              .cta {
+
+              }
+            }
+
+            .logo-wrapper {
+
+            }
+          }
+        }
+      }
+      /* Tablet */
+      @media (max-width: 1024px) and (min-width: 768px) {
+
+
+        .circle-large {
+          @include circleStyle(80rem, 80rem, -20rem, -30rem, null, $color_0);
+
+          &:before {
+            @include circleStyle(40rem, 40rem, null, null, null, nul);
+          }
+        }
+
+        .container {
+
+          .content {
+
+            .text {
+
+              h1 {
+                font-size: calc(3rem + 4vw);
+              }
+              h5 {
+                color: $color_2;
+                font-weight: 700;
+              }
+              p{
+                color: $color_2;
+              }
+              .cta {
+
+              }
+            }
+
+            .logo-wrapper {
+              
+            }
+          }
+        }
+      }
+      /* Mobile */
+      @media (max-width: 767px) and (min-width: 375px) {
+
+        
+        .circle-small {
+          @include circleStyle(20rem, 20rem, null, null, -5rem, $color_0);
+
+          &:before {
+            @include circleStyle(10rem, 10rem, null, null, null, nul);
+          }
+        }
+
+        .circle-large {
+          @include circleStyle(60rem, 60rem, -20rem, -30rem, null, $color_2);
+
+          &:before {
+            @include circleStyle(30rem, 30rem, null, null, null, nul);
+          }
+        }
+
+        .container {
+
+          .content {  
+
+            flex-direction: column-reverse;
+
+            .text {
+
+              h1 {
+                font-size: calc(2rem + 4vw);
+              }
+              h5 {
+                font-weight: 600;
+                font-size: calc(1rem + 1vw);
+              }
+              p{
+                font-weight: 600;
+                font-size: calc(1rem + 1vw);
+              }
+              .cta {
+
+              }
+            }
+
+            .logo-wrapper {
+              margin-bottom: 1rem;
+              text-align: center;
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 374px) {
+
+        .circle-small {
+          @include circleStyle(12rem, 12rem, null, null, -2.5rem, $color_0);
+          top: -4rem;
+
+          &:before {
+            @include circleStyle(6rem, 6rem, null, null, null, nul);
+          }
+        }
+
+        .circle-large {
+          @include circleStyle(30rem, 30rem, -10rem, -15rem, null, $color_2);
+
+          &:before {
+            @include circleStyle(15rem, 15rem, null, null, null, nul);
+          }
+        }
+
+        height: unset;
+        padding: 2rem 0;
+
+          .container {
+              .content {
+                flex-direction: column-reverse;
+                .text {
+
+                  h1 {
+                    font-size: calc(2rem + 3vw);
+                  }
+
+                  h5 {
+                    margin-top: 5rem;
+                    font-size: calc(1rem + 1vw);
+                  }
+
+                  p {
+                    font-size: calc(1rem + 1vw);
+                  }
+                }
+              }
+
+              .logo-wrapper  {
+                text-align: center;
+                img {
+                  width: 50%;
+                }
+              }
+          }
+      }
     }
     
     .overlay {
