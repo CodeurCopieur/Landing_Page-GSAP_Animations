@@ -213,6 +213,7 @@ html {
           html body .header .container .nav .nav-list .nav-item {
             margin: 0 2.5rem; }
             html body .header .container .nav .nav-list .nav-item .nav-link {
+              text-transform: capitalize;
               font-size: 1.4rem;
               font-weight: 800;
               letter-spacing: 1px;
@@ -224,7 +225,7 @@ html {
                 color: #07172B; }
         html body .header .container .nav .shopping-bag .icon {
           display: inline-block;
-          font-size: 1.8rem;
+          font-size: 2.75rem;
           cursor: pointer;
           -webkit-transform: translateX(-2rem);
           -ms-transform: translateX(-2rem);
@@ -234,7 +235,7 @@ html {
             height: 2rem;
             background-color: #021226;
             border-radius: 50%;
-            font-size: 1.25rem;
+            font-size: .65rem;
             font-family: sans-serif;
             color: #FFF;
             display: -webkit-box;
@@ -275,6 +276,25 @@ html {
         position: absolute;
         width: 12rem;
         height: 12rem;
+        border-radius: inherit;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: #293546; }
+    html body .hero .circle-large {
+      width: 120rem;
+      height: 120rem;
+      border-radius: 50%;
+      bottom: -40rem;
+      right: -50rem;
+      background-color: #FFF; }
+      html body .hero .circle-large::before {
+        content: '';
+        position: absolute;
+        width: 55rem;
+        height: 55rem;
         border-radius: inherit;
         top: 50%;
         left: 50%;
