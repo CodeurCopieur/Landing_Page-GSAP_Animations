@@ -198,58 +198,90 @@ html {
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        html body .header .container .nav .nav__burger {
+          display: none;
+          -webkit-transition: all 480ms;
+          -o-transition: all 480ms;
+          transition: all 480ms; }
+          html body .header .container .nav .nav__burger .icon {
+            font-size: 3rem;
+            color: #5D6774;
+            cursor: pointer; }
         html body .header .container .nav .nav-logo {
           font-size: 3rem;
           font-weight: 800;
-          color: #FFF; }
-        html body .header .container .nav .nav-list {
+          color: #FFF;
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1; }
+        html body .header .container .nav .wrapper {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
           -webkit-box-align: center;
           -ms-flex-align: center;
-          align-items: center; }
-          html body .header .container .nav .nav-list .nav-item {
-            margin: 0 2.5rem; }
-            html body .header .container .nav .nav-list .nav-item .nav-link {
-              text-transform: capitalize;
-              font-size: 1.4rem;
-              font-weight: 800;
-              letter-spacing: 1px;
-              color: #FFF;
-              -webkit-transition: color 480ms;
-              -o-transition: color 480ms;
-              transition: color 480ms; }
-              html body .header .container .nav .nav-list .nav-item .nav-link:hover {
-                color: #07172B; }
-        html body .header .container .nav .shopping-bag .icon {
-          display: inline-block;
-          font-size: 2.75rem;
-          cursor: pointer;
-          -webkit-transform: translateX(-2rem);
-          -ms-transform: translateX(-2rem);
-          transform: translateX(-2rem); }
-          html body .header .container .nav .shopping-bag .icon .bag-item-count {
-            width: 2rem;
-            height: 2rem;
-            background-color: #021226;
-            border-radius: 50%;
-            font-size: .65rem;
-            font-family: sans-serif;
-            color: #FFF;
+          align-items: center;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-flex: 2;
+          -ms-flex: 2;
+          flex: 2;
+          -webkit-transition: all 480ms;
+          -o-transition: all 480ms;
+          transition: all 480ms; }
+          html body .header .container .nav .wrapper .nav-list {
             display: -webkit-box;
             display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            position: absolute;
-            top: -1rem;
-            right: -2rem; }
+            display: flex; }
+            html body .header .container .nav .wrapper .nav-list .nav-item {
+              margin: 0 2.5rem; }
+              html body .header .container .nav .wrapper .nav-list .nav-item .nav-link {
+                text-transform: capitalize;
+                font-size: 1.4rem;
+                font-weight: 800;
+                letter-spacing: 1px;
+                color: #FFF;
+                -webkit-transition: color 480ms;
+                -o-transition: color 480ms;
+                transition: color 480ms; }
+                html body .header .container .nav .wrapper .nav-list .nav-item .nav-link:hover {
+                  color: #07172B; }
+          html body .header .container .nav .wrapper .shopping-bag .icon {
+            display: inline-block;
+            font-size: 2.75rem;
+            cursor: pointer;
+            -webkit-transform: translateX(-2rem);
+            -ms-transform: translateX(-2rem);
+            transform: translateX(-2rem); }
+            html body .header .container .nav .wrapper .shopping-bag .icon .bag-item-count {
+              width: 2rem;
+              height: 2rem;
+              background-color: #021226;
+              border-radius: 50%;
+              font-size: .65rem;
+              font-family: sans-serif;
+              color: #FFF;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              position: absolute;
+              top: -1rem;
+              right: -2rem; }
   html body .hero {
     background-color: #293546;
     width: 100%;
@@ -387,3 +419,27 @@ html {
           -webkit-box-flex: 0;
           -ms-flex: 0 0 45%;
           flex: 0 0 45%; }
+  html body .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 0; }
+    html body .overlay .layer {
+      background-color: #07172B; }
+    html body .overlay .layer-1 {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+    html body .overlay .layer-2 {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+    html body .overlay .layer-3 {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
