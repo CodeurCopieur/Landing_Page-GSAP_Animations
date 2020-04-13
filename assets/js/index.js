@@ -19,3 +19,14 @@ gsap.fromTo('.circle-small',
 gsap.fromTo('.circle-large',
         {x: '20rem', opacity: 0},
         {x: 0, opacity: 1, ease: 'back.out(1.7)', delay:1.5});
+
+
+const selectElement = (s) => document.querySelector(s);
+
+selectElement('.nav__burger').addEventListener('click', ()=> {
+  selectElement('.wrapper').classList.toggle('is-active')
+})
+
+selectElement('.hero').addEventListener('click', ()=> {
+  selectElement('.wrapper').classList.remove('is-active')
+})
