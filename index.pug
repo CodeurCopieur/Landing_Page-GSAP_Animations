@@ -12,14 +12,17 @@ html(lang="fr")
     header.header
       .container
         nav.nav
+          .nav__burger
+            i.icon.ion-md-menu
           a.nav-logo(href="") Codwerk
-          ul.nav-list
-            each val in ['home', 'gallery', 'features', 'reviews', 'shop']
-              li.nav-item
-                a.nav-link(href="")= val
-          .shopping-bag
-            i.icon.ion-md-mail
-              span.bag-item-count 1000
+          .wrapper
+            ul.nav-list
+              each val in ['home', 'gallery', 'features', 'reviews', 'shop']
+                li.nav-item
+                  a.nav-link(href="")= val
+            .shopping-bag
+              i.icon.ion-md-mail
+                span.bag-item-count 1000
     //hero
     section.hero
       .circle.circle-small
@@ -38,6 +41,10 @@ html(lang="fr")
           .logo-wrapper 
             img(src="assets/img/logo.png", alt="")
       .overlay
-        .layer.layer1
-        .layer.layer2
-        .layer.layer3
+        .layer.layer-1
+        .layer.layer-2
+        .layer.layer-3
+
+    //Gsap CDN    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js")
+    script(src="assets/js/index.js")

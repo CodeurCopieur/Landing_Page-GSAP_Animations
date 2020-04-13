@@ -11,15 +11,18 @@
     <!--header-->
     <header class="header">
       <div class="container">
-        <nav class="nav"><a class="nav-logo" href="">Codwerk</a>
-          <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="#">home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">features</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">reviews</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">shop</a></li>
-          </ul>
-          <div class="shopping-bag"><i class="icon ion-md-mail"><span class="bag-item-count">1000</span></i></div>
+        <nav class="nav">
+          <div class="nav__burger"><i class="icon ion-md-menu"></i></div><a class="nav-logo" href="">Codwerk</a>
+          <div class="wrapper">
+            <ul class="nav-list">
+              <li class="nav-item"><a class="nav-link" href="">home</a></li>
+              <li class="nav-item"><a class="nav-link" href="">gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="">features</a></li>
+              <li class="nav-item"><a class="nav-link" href="">reviews</a></li>
+              <li class="nav-item"><a class="nav-link" href="">shop</a></li>
+            </ul>
+            <div class="shopping-bag"><i class="icon ion-md-mail"><span class="bag-item-count">1000</span></i></div>
+          </div>
         </nav>
       </div>
     </header>
@@ -38,10 +41,13 @@
         </div>
       </div>
       <div class="overlay">
-        <div class="layer layer1"></div>
-        <div class="layer layer2"></div>
-        <div class="layer layer3"></div>
+        <div class="layer layer-1"></div>
+        <div class="layer layer-2"></div>
+        <div class="layer layer-3"></div>
       </div>
     </section>
+    <!--Gsap CDN    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
